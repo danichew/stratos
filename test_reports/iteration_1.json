@@ -1,0 +1,41 @@
+{
+  "summary": "First-finish smoke test of Stratotos backend + frontend. All critical public API endpoints (articles list/filters/featured/detail with related+views, courses, subscribe with dedup, leads) work. Auth login returns JWT, /auth/me returns 401 without token and admin user with token. Admin CRUD for articles/courses works and stats/leads/subscribers endpoints authenticated correctly. Frontend home loads with hero, ticker, radar; hero click navigates to /articulo/{slug}. Admin login (button label 'Ingresar'), dashboard shows stats (8 articles, 4 courses, 1 sub, 1 lead), and all 5 admin nav pages load with data (leads and subscribers reflect real submissions).",
+  "tested_scope": ["backend", "frontend", "auth", "integration"],
+  "passed": [
+    "GET /api/articles returns items with total=8",
+    "GET /api/articles?featured=true returns 3 items",
+    "GET /api/articles?category=ia returns 3 items",
+    "GET /api/articles/{slug} returns article + 2 related and increments views",
+    "GET /api/courses returns 4 seeded courses",
+    "POST /api/subscribe returns subscribed then already_subscribed on duplicate",
+    "POST /api/leads creates lead with all fields",
+    "POST /api/auth/login returns access_token + admin user",
+    "GET /api/auth/me 401 without token; returns admin with Bearer token",
+    "POST /api/admin/articles creates article with auto-generated slug",
+    "DELETE /api/admin/articles/{id} removes article",
+    "POST /api/admin/courses creates course (requires cover_image)",
+    "PUT /api/admin/courses/{id} works when full body provided",
+    "DELETE /api/admin/courses/{id} works",
+    "GET /api/admin/stats, /api/admin/leads, /api/admin/subscribers return data with Bearer",
+    "Frontend home page loads with hero, ticker, radar grid",
+    "Clicking hero navigates to /articulo/{slug} and renders content",
+    "Admin login at /login with credentials redirects to /admin",
+    "Admin dashboard shows correct stats (8/3/4/1/1/1)",
+    "All 5 admin nav pages load (Dashboard, Noticias, Cursos, Leads, Suscriptores)",
+    "Submitted leads and subscribers appear in admin pages"
+  ],
+  "failed": [
+    {
+      "area": "backend",
+      "issue": "PUT /api/admin/articles/{id} and PUT /api/admin/courses/{id} require the FULL article/course body (all required fields). Partial updates return 422. Update endpoint using ArticleCreate/CourseCreate model instead of a partial/optional-fields model.",
+      "evidence": "PUT /admin/articles with only {title} returned response with title:None; PUT /admin/courses with only {title} returned 422 'Field required' for description/level/duration/price/cover_image.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "action_items": [
+    "Optional: Convert admin PUT endpoints to accept a partial update model (all fields optional) so admins can update single fields. Frontend AdminArticles/AdminCourses currently send the full body from edit modals, so end-to-end UI flow is unaffected — this is only an API ergonomics issue."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}

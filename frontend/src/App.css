@@ -1,0 +1,4 @@
+/* Reset - dark theme handled globally in index.css */
+.App {
+    min-height: 100vh;
+}

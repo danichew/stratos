@@ -1,0 +1,105 @@
+{
+  "project_name": "Stratotos System",
+  "app_type": "hybrid_fullstack",
+  "theme_strategy": "dark-forced",
+  "palette_archetype": "ELECTRIC & NEON",
+  "colors": {
+    "primary": "#00E5FF",
+    "background": "#05050A",
+    "surface": "#0F0F14",
+    "surface_glass": "rgba(10, 10, 15, 0.7)",
+    "border": "#1A1A24",
+    "text_main": "#FFFFFF",
+    "text_muted": "#8A8A93",
+    "accent_sap": "#0044FF",
+    "accent_academy": "#E500FF"
+  },
+  "typography": {
+    "headings": {
+      "font": "Outfit",
+      "strategy": "Aggressive, tight-tracking for tech authority. H1 max text-5xl to text-6xl. font-black for hero."
+    },
+    "body": {
+      "font": "IBM Plex Sans",
+      "strategy": "High legibility, editorial standard, leading-relaxed for long-form reading."
+    },
+    "mono": {
+      "font": "JetBrains Mono",
+      "strategy": "Category labels, meta information, dates. tracking-[0.2em] uppercase."
+    }
+  },
+  "logo": {
+    "type": "css_svg_typographic",
+    "instructions": "Build with pure CSS/HTML. 'STRATOTOS' in Outfit font-black text-3xl tracking-tighter text-white. 'SYSTEM' below it (or right next to it in a pill) in JetBrains Mono text-xs tracking-widest text-[#00E5FF]."
+  },
+  "layouts": {
+    "hero": "TETRIS GRID (MODE A). Asymmetrical bento grid. gap-4 or gap-6. Dominant article takes col-span-full md:col-span-8 row-span-2, supporting articles take col-span-4.",
+    "news_feed": "GRID BORDERS (The 'Technical' Look). Dense layout (grid-cols-1 md:grid-cols-3 lg:grid-cols-4). Border-b and border-r between items. No floating cards. Pure editorial flow.",
+    "sap_consulting": "Premium block. Use THE TRACING BEAM or subtle glow to differentiate from news. Deep blue ambient tint behind the section.",
+    "academy": "Course listings using crisp, sharp corner cards (border-radius 0). Deep hover effects.",
+    "admin": "MODE B: High Density Grid. Sidebar navigation. Data-heavy layout with pure black backgrounds and #1A1A24 borders. High contrast."
+  },
+  "components": {
+    "navigation": "Sticky top bar. MUST use backdrop-blur-xl and bg-[#05050A]/70. Never fully transparent. Clear brand logo on left, links center, Subscribe/Admin CTA right.",
+    "buttons": "Sharp edges. bg-[#00E5FF] text-black font-bold hover:bg-white hover:text-black transition-colors.",
+    "news_card": "HTML/Tailwind raw layout. Image container with overflow-hidden and hover:scale-105. Text below image. Avoid Shadcn standard 'Card'.",
+    "forms": "Use Shadcn Input, Select. bg-[#0F0F14] border-[#1A1A24] focus:border-[#00E5FF]."
+  },
+  "motion": {
+    "scrolling": "Implement @studio-freight/lenis or framer-motion scroll wrappers if possible for smooth editorial feel.",
+    "interactions": "Hover states must brighten colors. Images in grids must slightly scale up on parent hover.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "image_urls": {
+    "ai_news": [
+      {
+        "url": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3ODY2NzYxODZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero AI News",
+        "description": "Computer chip"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3ODY2NzYxODZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Secondary News",
+        "description": "Circuit board with brain"
+      }
+    ],
+    "sap_consulting": [
+      {
+        "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMGNvbnN1bHRpbmclMjB0ZWNobm9sb2d5fGVufDB8fHx8MTc4NjY3NjE4Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "SAP Consulting Hero",
+        "description": "Corporate meeting"
+      }
+    ],
+    "academy": [
+      {
+        "url": "https://images.unsplash.com/photo-1640163561331-1b68a6474957?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw0fHxzdHVkZW50cyUyMGxlYXJuaW5nJTIwY29kaW5nJTIwc2NyZWVufGVufDB8fHx8MTc4NjY3NjE4Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "Academy Course Hero",
+        "description": "Woman coding"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxzdHVkZW50cyUyMGxlYXJuaW5nJTIwY29kaW5nJTIwc2NyZWVufGVufDB8fHx8MTc4NjY3NjE4Nnww&ixlib=rb-4.1.0&q=85",
+        "category": "Academy Course Thumbnail",
+        "description": "Man learning gadget"
+      }
+    ],
+    "tech_figures": [
+      {
+        "url": "https://images.unsplash.com/photo-1745273079710-a87d91592074?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHx0ZWNoJTIwY2VvJTIwcG9ydHJhaXQlMjBsaWdodGluZ3xlbnwwfHx8fDE3ODY2NzYxODZ8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Tech CEO News",
+        "description": "Man in suit green light"
+      }
+    ]
+  },
+  "GENERAL_UI_UX_DESIGN_GUIDELINES": [
+    "CRITICAL: All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='news-article-link', data-testid='submit-consulting').",
+    "CRITICAL: Do NOT use complete 'transparent' background in header, overlays, or any surface that has content under it. ALWAYS use a solid color or backdrop-blur with a semi-transparent background.",
+    "CRITICAL: Make sure guidelines and components are written for .js/.jsx files, not .tsx.",
+    "CRITICAL: Ensure text contrast meets APCA/WCAG standards. Text over images MUST have an overlay gradient (e.g., bg-black/50) or text-shadow.",
+    "Do NOT center align the app container. No '.App { text-align: center; }' globally.",
+    "Do NOT apply 'transition: all'. Explicitly state transitions (e.g., 'transition-colors', 'transition-transform').",
+    "Use generous spacing: Replace standard p-4 with p-6 or p-8 to give the layout breathing room, especially in the Xataka-style dense grid.",
+    "Avoid AI assistant emojis.",
+    "Use 'sonner' from shadcn for toast notifications.",
+    "Icons: Use 'lucide-react' (default) or install '@phosphor-icons/react' for a more editorial look."
+  ]
+}
