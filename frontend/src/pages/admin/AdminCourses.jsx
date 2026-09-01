@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import { api } from "@/lib/api";
 import { Plus, Trash2, Pencil, X } from "lucide-react";
 
-const EMPTY = { title: "", description: "", level: "Basico", duration: "", price: 0, cover_image: "", category: "sap", instructor: "Instructor Stratotos", published: true };
+const EMPTY = { title: "", description: "", level: "Basico", duration: "", price: 0, cover_image: "", category: "sap", instructor: "Instructor Stratos", published: true };
 
 export default function AdminCourses() {
   const [items, setItems] = useState([]);

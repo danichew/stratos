@@ -89,7 +89,7 @@ class ArticleIn(BaseModel):
     content: str
     category: str
     cover_image: str
-    author: str = "Redaccion Stratotos"
+    author: str = "Redaccion Stratos"
     featured: bool = False
     published: bool = True
 
@@ -110,7 +110,7 @@ class CourseIn(BaseModel):
     price: float
     cover_image: str
     category: str = "sap"  # sap | ia | otros
-    instructor: str = "Instructor Stratotos"
+    instructor: str = "Instructor Stratos"
     published: bool = True
 
 
@@ -134,7 +134,7 @@ class LeadIn(BaseModel):
 
 
 # ---------- App ----------
-app = FastAPI(title="Stratotos System API")
+app = FastAPI(title="Stratos API")
 api = APIRouter(prefix="/api")
 
 
@@ -156,7 +156,7 @@ async def startup():
             "id": str(uuid.uuid4()),
             "email": admin_email,
             "password_hash": hash_password(admin_password),
-            "name": "Admin Stratotos",
+            "name": "Admin Stratos",
             "role": "admin",
             "created_at": datetime.now(timezone.utc).isoformat(),
         })
@@ -312,7 +312,7 @@ def _seed_courses():
 # ---------- Public endpoints ----------
 @api.get("/")
 async def root():
-    return {"service": "Stratotos System API", "status": "ok"}
+    return {"service": "Stratos API", "status": "ok"}
 
 
 @api.get("/articles")

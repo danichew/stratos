@@ -34,7 +34,7 @@ export default function Academy() {
     <div data-testid="academy-page">
       <section className="border-b border-strato" style={{ background: "radial-gradient(700px 400px at 20% 30%, rgba(229,0,255,0.18), transparent 60%)" }}>
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-24 md:py-32">
-          <div className="font-mono-strato text-[11px] tracking-[0.3em] uppercase text-[#E500FF]">/ Academia Stratotos</div>
+          <div className="font-mono-strato text-[11px] tracking-[0.3em] uppercase text-[#E500FF]">/ Academia Stratos</div>
           <h1 className="font-display font-black text-white text-5xl md:text-7xl leading-[1] tracking-tight mt-6 max-w-4xl">
             Aprende con quien <span className="text-[#E500FF]">implementa de verdad.</span>
           </h1>

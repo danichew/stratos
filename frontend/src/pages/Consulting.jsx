@@ -67,7 +67,7 @@ export default function Consulting() {
       <section className="border-y border-strato bg-strato-surface">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-20 grid md:grid-cols-2 gap-14">
           <div>
-            <div className="font-mono-strato text-[11px] tracking-[0.3em] uppercase text-[#00E5FF] mb-4">/ Por que Stratotos</div>
+            <div className="font-mono-strato text-[11px] tracking-[0.3em] uppercase text-[#00E5FF] mb-4">/ Por que Stratos</div>
             <h2 className="font-display font-black text-white text-4xl md:text-5xl tracking-tight leading-[1.05]">La diferencia esta en el equipo.</h2>
             <ul className="mt-10 space-y-5">
               {benefits.map((b, i) => (

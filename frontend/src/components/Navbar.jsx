@@ -16,7 +16,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-strato backdrop-blur-xl" style={{ background: "rgba(5,5,10,0.75)" }} data-testid="main-navbar">
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-10 h-16">
+      <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
         <Logo />
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (

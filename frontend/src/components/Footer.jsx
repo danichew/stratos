@@ -6,9 +6,9 @@ export const Footer = () => {
     <footer className="border-t border-strato mt-24 bg-[#05050A]" data-testid="main-footer">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
         <div className="col-span-2 md:col-span-1">
-          <Logo />
+          <Logo variant="footer" />
           <p className="mt-6 text-sm text-muted-strato leading-relaxed">
-            La plataforma latinoamericana de noticias tech, consultoria SAP y formacion especializada.
+            Innovacion en Sistemas. La plataforma latinoamericana de noticias tech, consultoria SAP y formacion especializada.
           </p>
         </div>
         <div>
@@ -29,7 +29,7 @@ export const Footer = () => {
         <div>
           <div className="font-mono-strato text-[10px] tracking-[0.3em] uppercase text-[#00E5FF] mb-4">Empresa</div>
           <ul className="space-y-3 text-sm">
-            <li><a href="mailto:hola@stratotos.com" className="text-white/80 hover:text-[#00E5FF]">hola@stratotos.com</a></li>
+            <li><a href="mailto:hola@stratos.com" className="text-white/80 hover:text-[#00E5FF]">hola@stratos.com</a></li>
             <li><Link to="/login" className="text-white/60 hover:text-[#00E5FF]" data-testid="footer-admin-link">Acceso Admin</Link></li>
           </ul>
         </div>
@@ -37,7 +37,7 @@ export const Footer = () => {
       <div className="border-t border-strato">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-mono-strato text-[10px] tracking-[0.25em] uppercase text-muted-strato">
-            &copy; 2026 Stratotos System &mdash; Todos los derechos reservados
+            &copy; 2026 Stratos &mdash; Innovacion en Sistemas
           </div>
           <div className="font-mono-strato text-[10px] tracking-[0.25em] uppercase text-muted-strato">
             Powered by curiosity

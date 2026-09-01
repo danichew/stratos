@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import { api } from "@/lib/api";
 import { Plus, Trash2, Pencil, X } from "lucide-react";
 
-const EMPTY = { title: "", excerpt: "", content: "", category: "ia", cover_image: "", author: "Redaccion Stratotos", featured: false, published: true };
+const EMPTY = { title: "", excerpt: "", content: "", category: "ia", cover_image: "", author: "Redaccion Stratos", featured: false, published: true };
 
 export default function AdminArticles() {
   const [items, setItems] = useState([]);

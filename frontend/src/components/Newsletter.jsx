@@ -14,7 +14,7 @@ export const Newsletter = () => {
     try {
       const { data } = await api.post("/subscribe", { email });
       if (data.status === "already_subscribed") {
-        toast.info("Ya estas suscrito a Stratotos System");
+        toast.info("Ya estas suscrito a Stratos");
       } else {
         toast.success("Suscripcion confirmada. Bienvenido al futuro.");
       }
