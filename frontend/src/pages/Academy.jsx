@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { api } from "@/lib/api";
-import { GraduationCap, Clock, Award, Users } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 export default function Academy() {
   const [courses, setCourses] = useState([]);
@@ -36,22 +36,26 @@ export default function Academy() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-10 py-24 md:py-32">
           <div className="font-mono-strato text-[11px] tracking-[0.3em] uppercase text-[#E500FF]">/ Academia Stratos</div>
           <h1 className="font-display font-black text-white text-5xl md:text-7xl leading-[1] tracking-tight mt-6 max-w-4xl">
-            Aprende con quien <span className="text-[#E500FF]">implementa de verdad.</span>
+            Aprende con quien <span className="text-[#E500FF]">implementa de verdad.</span>{" "}
+            <span className="align-middle inline-block font-mono-strato text-xs md:text-sm tracking-[0.2em] uppercase text-[#E500FF] border border-[#E500FF] rounded-full px-4 py-1 ml-2">
+              Proximamente
+            </span>
           </h1>
           <p className="mt-8 text-muted-strato text-lg md:text-xl max-w-2xl leading-relaxed">
             Cursos intensivos de SAP e IA impartidos por consultores en proyecto. Laboratorios reales, certificacion de participacion y comunidad activa.
           </p>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
-              { icon: GraduationCap, k: "12+", v: "Cursos activos" },
-              { icon: Users, k: "3.400", v: "Egresados" },
-              { icon: Award, k: "94%", v: "Satisfaccion" },
-              { icon: Clock, k: "Live", v: "Sesiones semanales" },
-            ].map(({ icon: I, k, v }, i) => (
+              "Administrador BTP",
+              "S/4 HANA BASIS",
+              "Modulo MM",
+              "Modulo PM",
+              "BTP",
+            ].map((nombre, i) => (
               <div key={i} className="border-l border-strato pl-4">
-                <I size={20} className="text-[#E500FF] mb-3" />
-                <div className="font-display font-black text-white text-2xl md:text-3xl">{k}</div>
-                <div className="font-mono-strato text-[10px] tracking-[0.25em] uppercase text-muted-strato mt-1">{v}</div>
+                <GraduationCap size={20} className="text-[#E500FF] mb-3" />
+                <div className="font-display font-black text-white text-lg md:text-xl leading-tight">{nombre}</div>
+                <div className="font-mono-strato text-[10px] tracking-[0.25em] uppercase text-muted-strato mt-1">Proximamente</div>
               </div>
             ))}
           </div>
